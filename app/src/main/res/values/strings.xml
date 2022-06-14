@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="are_you_dumb">Are you dumb?</string>
+    <string name="i_knew_it">I knew it! :3</string>
 </resources>
