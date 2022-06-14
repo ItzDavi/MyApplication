@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/are_you_dumb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Are you dumb?"
-        android:textSize="28sp"
+        android:text="@string/are_you_dumb"
         android:textColor="@color/black"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,13 +22,14 @@
 
     <Button
         android:id="@+id/yes_button"
-        style="?attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginBottom="80dp"
-        android:layout_weight="0.5"
-        android:text="Yes"
+        android:background="@drawable/button"
+        android:clickable="false"
+        android:elevation="200dp"
+        android:text="@string/yes"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,17 +37,17 @@
 
     <Button
         android:id="@+id/no_button"
-        style="?attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
         android:layout_marginBottom="80dp"
-        android:layout_weight="0.5"
-        android:text="No"
+        android:background="@drawable/button"
+        android:text="@string/no"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.783"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
