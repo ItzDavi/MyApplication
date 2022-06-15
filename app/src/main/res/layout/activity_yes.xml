@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Yes">
+    tools:context=".Yes"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/i_knew_it"
@@ -23,6 +24,13 @@
         android:id="@+id/guudbai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thanks, close this stupid app and I hope to never enter again"/>
+        android:layout_marginBottom="180dp"
+        android:background="@drawable/button"
+        android:text="Thanks, close this now"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
