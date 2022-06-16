@@ -21,12 +21,11 @@ class MainActivity : AppCompatActivity() {
         val noButton = findViewById<Button>(R.id.no_button)
 
         noButton.setOnClickListener {
-
-            val randomEnd = (-50..50).shuffled().last()
+            val randomEnd = (-50..0).shuffled().last()
             val randomBottom = if (randomEnd < 0) {
                 (50..100).shuffled().last()
             } else if (randomEnd > 0) {
-                (-100..-50).shuffled().last()
+                (-100..50).shuffled().last()
             } else {
                 3
             }
@@ -38,10 +37,10 @@ class MainActivity : AppCompatActivity() {
             val param = noButton.layoutParams as ViewGroup.MarginLayoutParams
 
             if (noButton.x + noButton.width > screenWidth) {
-                param.setMargins(0,0,screenWidth - noButton.width,noButton.marginBottom + randomBottom)
+                param.setMargins(0,0,screenWidth - noButton.width + 20,noButton.marginBottom + randomBottom)
 
             } else if (noButton.y + noButton.height > screenHeight) {
-                param.setMargins(0,0,noButton.marginEnd + randomEnd,screenHeight - noButton.height)
+                param.setMargins(0,0,noButton.marginEnd + randomEnd,screenHeight - noButton.height + 20)
 
             } else {
                 param.setMargins(0,0,noButton.marginEnd + randomEnd,noButton.marginBottom + randomBottom)

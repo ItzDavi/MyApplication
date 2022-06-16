@@ -3,6 +3,7 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 
 class Yes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,10 +14,15 @@ class Yes : AppCompatActivity() {
         var clickCounter = 0
 
         closeButton.setOnClickListener {
-            if (clickCounter >= 20) {
+            clickCounter++
+            if (clickCounter == 5) {
+                Toast.makeText(this, "Maybe clicking it again 15 times, it will fix it", Toast.LENGTH_SHORT).show()
+            } else if (clickCounter == 10) {
+                Toast.makeText(this, "Maybe clicking it again 10 times, it will fix it", Toast.LENGTH_SHORT).show()
+            } else if (clickCounter == 15) {
+                Toast.makeText(this, "Maybe clicking it again 5 times, it will fix it", Toast.LENGTH_SHORT).show()
+            } else if (clickCounter >= 20) {
                 finish()
-            } else {
-                clickCounter++
             }
         }
     }
